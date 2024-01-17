@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.canvas-button-container {
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-button-container button {
+    margin: 0 10px;
+    background-color: transparent;
+    border: 0;
+}
+
+.canvas-container {
+    background-color: rgb(236, 236, 236);
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#drawing-board {
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    transform-origin: 10px 10px;
+}

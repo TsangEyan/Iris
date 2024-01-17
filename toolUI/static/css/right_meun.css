@@ -1,0 +1,21 @@
+.menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    border: 1px solid #dadce0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.active {
+    visibility: visible;
+}
+
+.menu__item,
+
+.menu__item:hover,
+
+.menu__item:hover {
+    opacity: 1;
+}

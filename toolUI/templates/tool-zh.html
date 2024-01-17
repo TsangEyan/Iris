@@ -1,0 +1,598 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>LayoutVQVAE</title>
+{#    <link rel="stylesheet" href="static/css/tool_header.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static '/css/tool_header.css' %}" type="text/css">
+
+{#    <link rel="stylesheet" href="static/css/tool_tool.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static '/css/tool_tool.css' %}" type="text/css">
+{#    <link rel="stylesheet" href="static/css/tool_left.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static '/css/tool_left.css' %}" type="text/css">
+{#    <link rel="stylesheet" href="static/css/tool_center.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static '/css/tool_center.css' %}" type="text/css">
+{#    <link rel="stylesheet" href="static/css/tool_right.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static '/css/tool_right.css' %}" type="text/css">
+
+
+</head>
+
+<body>
+    <!-- 导航栏  -->
+    <div class="super-container">
+        <div class="header-container">
+            <div class="header">
+            </div>
+        </div>
+
+        <div class="main-body">
+            <div class="left-container">
+
+                <div class="input-prompt"> 用户输入 </div>
+
+
+                <div class="scene-select-container">
+                    <button class="btn btn1 scene-btn btn-activate" value="Text">文档布局</button>
+                    <button class="btn btn1 scene-btn" value="UI">UI布局</button>
+                    <button class="btn btn1 scene-btn" value="Card">卡片布局</button>
+                    <button class="btn btn1 scene-btn" value="Poster">杂志布局</button>
+                    <button class="btn btn1 scene-btn" value="Magazine">海报布局</button>
+
+                </div>
+
+                <div class="element-input-container element-input-container-active pub">
+                    <div class="element-input-line">
+                        <div class="element-color pub-text-color"></div>
+                        <div class="element-name">文本</div>
+                        <input class="element-input" type="text" id="pub_text">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color pub-list-color"></div>
+                        <div class="element-name">列表</div>
+                        <input class="element-input" type="text" id="pub_list">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color pub-figure-color"></div>
+                        <div class="element-name">图片</div>
+                        <input class="element-input" type="text" id="pub_figure">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color pub-title-color"></div>
+                        <div class="element-name">标题</div>
+                        <input class="element-input" type="text" id="pub_title">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color pub-table-color"></div>
+                        <div class="element-name">表格</div>
+                        <input class="element-input" type="text" id="pub_table">
+                    </div>
+                </div>
+
+                <div class="element-input-container rico">
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-toolbar-color"></div>
+                        <div class="element-name">工具栏</div>
+                        <input class="element-input" type="text" id="rico_toolbar">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-image-color"></div>
+                        <div class="element-name">图片</div>
+                        <input class="element-input" type="text" id="rico_image">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-text-color"></div>
+                        <div class="element-name">文本</div>
+                        <input class="element-input" type="text" id="rico_text">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-icon-color"></div>
+                        <div class="element-name">图标</div>
+                        <input class="element-input" type="text" id="rico_icon">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-tbutton-color"></div>
+                        <div class="element-name">文本按钮</div>
+                        <input class="element-input" type="text" id="rico_textButton">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-input-color"></div>
+                        <div class="element-name">输入</div>
+                        <input class="element-input" type="text" id="rico_input">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-listitem-color"></div>
+                        <div class="element-name">列表项目</div>
+                        <input class="element-input" type="text" id="rico_list">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-ad-color"></div>
+                        <div class="element-name">广告</div>
+                        <input class="element-input" type="text" id="rico_ad">
+                    </div>
+
+{#                    <div class="element-input-line">#}
+{#                        <div class="element-color rico-paper-color"></div>#}
+{#                        <div class="element-name">Pager Indicator</div>#}
+{#                        <input class="element-input" type="text" id="rico_pager">#}
+{#                    </div>#}
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-web-color"></div>
+                        <div class="element-name">网页视图</div>
+                        <input class="element-input" type="text" id="rico_web">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color rico-bkg-color"></div>
+                        <div class="element-name">背景</div>
+                        <input class="element-input" type="text" id="rico_background">
+                    </div>
+
+{#                    <div class="element-input-line">#}
+{#                        <div class="element-color rico-drawer-color"></div>#}
+{#                        <div class="element-name">Drawer</div>#}
+{#                        <input class="element-input" type="text" id="rico_drawer">#}
+{#                    </div>#}
+
+{#                    <div class="element-input-line">#}
+{#                        <div class="element-color rico-model-color"></div>#}
+{#                        <div class="element-name">Model</div>#}
+{#                        <input class="element-input" type="text" id="rico_model">#}
+{#                    </div>#}
+
+                </div>
+
+                <div class="element-input-container card">
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-scenario-color"></div>
+                        <div class="element-name">场景选择</div>
+                        <select id="card-scenario" class="element-input">
+                            <option selected>推荐场景</option>
+                            <option>类别场景</option>
+                            <option>搜索场景</option>
+                        </select>
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-headline-color"></div>
+                        <div class="element-name">标题</div>
+                        <input class="element-input" type="text" id="card_headline">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-image-color"></div>
+                        <div class="element-name">图片</div>
+                        <input class="element-input" type="text" id="card_image">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-service-color"></div>
+                        <div class="element-name">服务</div>
+                        <input class="element-input" type="text" id="card_service">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-ation-color"></div>
+                        <div class="element-name">活动</div>
+                        <input class="element-input" type="text" id="card_actionPoint">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-price-color"></div>
+                        <div class="element-name">价格</div>
+                        <input class="element-input" type="text" id="card_price">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-benefit-color"></div>
+                        <div class="element-name">优惠</div>
+                        <input class="element-input" type="text" id="card_benefit">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-description-color"></div>
+                        <div class="element-name">详情描述</div>
+                        <input class="element-input" type="text" id="card_description">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color card-data-color"></div>
+                        <div class="element-name">资料</div>
+                        <input class="element-input" type="text" id="card_data">
+                    </div>
+
+
+
+                </div>
+
+                <div class="element-input-container magazine">
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-scenario-color"></div>
+                        <div class="element-name">场景</div>
+                        <select id="magezine-scenario" class="element-input">
+                            <option selected>时尚</option>
+                            <option>美食</option>
+                            <option>新闻</option>
+                            <option>科学</option>
+                            <option>旅游</option>
+                            <option>婚庆</option>
+                        </select>
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-text-color"></div>
+                        <div class="element-name">文本</div>
+                        <input class="element-input" type="text" id="magazine_text">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-image-color"></div>
+                        <div class="element-name">图片</div>
+                        <input class="element-input" type="text" id="magazine_image">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-headline-color"></div>
+                        <div class="element-name">标题</div>
+                        <input class="element-input" type="text" id="magazine_headline">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-toi-color"></div>
+                        <div class="element-name">图片文字</div>
+                        <input class="element-input" type="text" id="magazine_text-over-image">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color mag-hoi-color"></div>
+                        <div class="element-name">图片标题</div>
+                        <input class="element-input" type="text" id="magazine_headline-over-image">
+                    </div>
+
+                </div>
+
+                <div class="element-input-container poster">
+
+                    <div class="element-input-line">
+                        <div class="element-color poster-logo-color"></div>
+                        <div class="element-name">商标</div>
+                        <input class="element-input" type="text" id="poster_logo">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color poster-text-color"></div>
+                        <div class="element-name">文本</div>
+                        <input class="element-input" type="text" id="poster_text">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color poster-underlay-color"></div>
+                        <div class="element-name">衬底</div>
+                        <input class="element-input" type="text" id="poster_underlay">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color poster-embellishment-color"></div>
+                        <div class="element-name">装饰</div>
+                        <input class="element-input" type="text" id="poster_embellishment">
+                    </div>
+
+                    <div class="element-input-line">
+                        <div class="element-color poster-highlight-color"></div>
+                        <div class="element-name">重点高亮</div>
+                        <input class="element-input" type="text" id="poster_highlight">
+                    </div>
+
+                    <div class="add-poster-img-btn-container">
+                        <button class="btn btn1" id="add-poster-img-btn">添加图片</button>
+                        <div class="content-img-upload">
+
+                        </div>
+
+                    </div>
+
+                    <input type="file" id="add-poster-img">
+
+
+                </div>
+
+
+
+
+
+
+                <div class="input-img"></div>
+
+                <div class="generate">
+                    <input class="btn btn1" type="submit" value="生成布局">
+                </div>
+
+            </div>
+
+            <div class="center-container">
+                <div class="masterplate-container">
+
+                </div>
+
+                <div class="canvas-stretch">
+                    <div class="canvas-button-container">
+                        <!-- <div>num</div> -->
+                        <button class="btn btn1" id="smaller">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-zoom-in"></use>
+                            </svg>
+                        </button>
+
+                        <button class="btn btn1" id="bigger">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-zoom-out"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="canvas-container">
+
+                    <div id="drawing-board"></div>
+                </div>
+
+
+
+            </div>
+
+            <div class="right-container">
+
+                <div class="input-prompt"> 编辑 </div>
+
+                <!-- Frame -->
+                <div class="frame-container">
+
+                    <div class="subframe-container">
+                        <div class="subprompt"> 画布 </div>
+                        <div class="frame-change">
+                            <button class="btn btn1" id="change-background"> 改变画布 </button>
+                        </div>
+                    </div>
+                    <div class="control-input-line">
+
+                        <div class="control-input-block">
+                            <div class="input-name"> W </div>
+                            <input type="text" class="control-input element-input" id="background_w"
+                                :value="background_w">
+                        </div>
+
+                        <div class="control-input-block">
+                            <div class="input-name"> H </div>
+                            <input type="text" class="control-input element-input" id="background_h"
+                                :value="background_h">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- layer -->
+                <div class=" layer-container">
+                    <div class="subprompt"> 图层 </div>
+
+                    <div class="control-input-line">
+
+                        <div class="control-input-block">
+                            <div class="input-name"> X </div>
+                            <input class="control-input element-input" type="text" id="rectX" name="x" :value="x">
+                        </div>
+
+                        <div class="control-input-block">
+                            <div class="input-name"> Y </div>
+                            <input class="control-input element-input" type="text" id="rectY" name="y" :valye="y">
+                        </div>
+
+                    </div>
+
+                    <div class="control-input-line">
+
+                        <div class="control-input-block">
+                            <div class="input-name"> W </div>
+                            <input class="control-input element-input" type="text" id="rectW" name="W" :valye="width">
+                        </div>
+
+                        <div class="control-input-block">
+                            <div class="input-name"> H </div>
+                            <input class="control-input element-input" type="text" id="rectH" name="H" :value="height">
+                        </div>
+
+                    </div>
+
+                    <div class="control-input-line">
+                        <button class="btn btn1" id="up">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-up-circle"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="down">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-direction-down-circle"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="delet-element">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-ashbin"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="add-element">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-add"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="layer-button-container"></div>
+
+                </div>
+
+                <!-- text -->
+                <div class="text-container">
+                    <div class="subframe-container">
+                        <div class="subprompt"> 文字 </div>
+                        <div class="frame-change">
+                            <button class="btn btn1" id="add-text"> 添加 </button>
+                        </div>
+                    </div>
+
+                    <div class="control-input-line">
+                        <select id="font-name">
+                            <option selected>Arial</option>
+                            <option>Georgia</option>
+                        </select>
+
+                        <select id="font-size">
+                            <option>6</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>12</option>
+                            <option>14</option>
+                            <option>16</option>
+                            <option>18</option>
+                            <option>20</option>
+                            <option>22</option>
+                            <option selected>24</option>
+                            <option>26</option>
+                            <option>28</option>
+                            <option>30</option>
+                            <option>32</option>
+                            <option>34</option>
+                            <option>36</option>
+                            <option>38</option>
+                            <option>40</option>
+                            <option>42</option>
+                            <option>44</option>
+                            <option>46</option>
+                            <option>48</option>
+                            <option>50</option>
+                            <option>52</option>
+                            <option>54</option>
+                            <option>56</option>
+                            <option>58</option>
+                            <option>60</option>
+                            <option>62</option>
+                            <option>64</option>
+                            <option>66</option>
+                            <option>68</option>
+                            <option>70</option>
+                            <option>72</option>
+                        </select>
+                        <button class="text-btn" id="front-bold">B</button>
+                        <button class="text-btn" id="front-italic">I</button>
+                    </div>
+                    <div class="control-input-line">
+                        <div class="input-name">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-a-yuanshuju-hanggaodanhang"></use>
+                            </svg>
+                        </div>
+
+                        <input id="boxLineHeight" type="range" min="0" max="30" value="10">
+                        <span class="rangeInfo" id="boxLineHeightVal">10</span>
+                    </div>
+                    <div class="control-input-line align">
+                        <button class="btn btn1" id="left-align">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-zuoduiqi"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="center-align">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-juzhongduiqi"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="right-align">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-youduiqi"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn1" id="justify-align">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-zuoyouduiqi"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- image -->
+                <div class="img-container">
+                    <div class="subprompt"> 图片 </div>
+
+                    <div class="control-input-line">
+                        <button class="btn btn1" id="add-img">添加</button>
+                        <button class="btn btn1" id="cut">剪切</button>
+                    </div>
+
+                </div>
+
+                <div class="color-container">
+                    <input class="control-input element-input" id="color" value="rgba(255,160,0)"
+                        data-jscolor="{onInput:'update(this)'}">
+                </div>
+
+
+
+                <input type="file" id="file">
+                <div class="download">
+                    <button class="btn btn1" id="download-img">下载图片</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.js"></script>
+    <script src="https://unpkg.com/konva@8.3.14/konva.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+{#    <script src="static/js/jquery-3.6.1.min.js"></script>#}
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+{#    <script src="static/js/iconfont.js"></script>#}
+    <script src="{% static 'js/iconfont.js' %}"></script>
+{#    <script src="static/js/upload_img.js"></script>#}
+    <script src="{% static 'js/upload_img.js' %}"></script>
+{#    <script src="static/js/front.js"></script>#}
+    <script src="{% static 'js/front.js' %}"></script>
+{#    <script src="static/js/tool2.js"></script>#}
+    <script src="{% static 'js/tool2.js' %}"></script>
+{#    <script src="{% static 'js/debug.js' %}"></script>#}
+{#    <script src="static/js/jscolor.js"></script>#}
+    <script src="{% static 'js/jscolor.js' %}"></script>
+    <script src="{% static 'js/right_meun.js' %}"></script>
+    <script src="{% static 'js/scenario.js' %}"></script>
+    <script src="{% static 'js/magazine.js' %}"></script>
+    <script src="{% static 'js/masterplate.js' %}"></script>
+    <script src="{% static 'js/left.js' %}"></script>
+
+
+
+</body>
+
+
+</html>

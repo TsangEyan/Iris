@@ -1,0 +1,70 @@
+.main-body>.left {
+    position: relative;
+    width: 254px;
+    height: 910px;
+    background: rgb(224, 236, 240);
+}
+
+.left-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 254px;
+
+}
+
+.button-box {
+    /* margin: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-box>input {
+    margin: 5px 10px 10px 10px;
+    width: 60px;
+}
+
+.label-box {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    background-color: rgb(204, 224, 217);
+}
+
+.label-container {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+
+.label-container.label-active {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.img-box {
+    position: relative;
+    width: 150px;
+    height: 450px;
+    overflow-y: scroll;
+    margin: auto;
+
+    /* margin-top: 200px; */
+}
+
+.img-box img {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 80%;
+}

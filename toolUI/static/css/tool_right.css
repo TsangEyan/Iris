@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.frame-container,
+.layer-container,
+.text-container,
+.img-container {
+    padding: 10px 13px;
+    font-weight: 800;
+    border-bottom: 1px solid #8c8c8c;
+}
+
+.control-input-line {
+    display: flex;
+    flex: 0 1 30px;
+    /* margin: 10px auto; */
+    margin-top: 10px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+/* frame */
+.subframe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.frame-change button {
+    font-size: 13px;
+    padding: 3px 0;
+    font-weight: 700;
+    width: 65px;
+
+}
+
+.control-input-block {
+    display: flex;
+    flex: 0 1 20px;
+    align-items: center;
+    width: 80px;
+}
+
+.input-name {
+    width: 10px;
+    height: 19px;
+    font-size: 13px;
+}
+
+.control-input-block .control-input {
+    width: 50px;
+    margin-left: 10px;
+
+}
+
+/* layer */
+.control-input-line button {
+    flex: 0 1 45px;
+    margin: 10px 0;
+    font-size: 10px;
+    line-height: 2.5;
+    font-weight: 700;
+
+}
+
+/* text */
+.frame-change button {
+    font-size: 13px;
+    padding: 3px auto;
+    font-weight: 700;
+    width: 65px;
+
+}
+
+.text-container .control-input-line {
+    align-items: center;
+}
+
+.control-input-line select {
+    /* width: 45px; */
+    height: 30px;
+    margin-right: 10px;
+    flex: 1 10px;
+
+}
+
+.control-input-line select:first-child {
+    flex: 3 40px;
+
+}
+
+.text-container .control-input-line .text-btn {
+    border: 0;
+    width: 5px;
+    background: transparent;
+    font-size: 15px;
+    flex: 1 10px;
+    padding: auto 0;
+
+}
+
+.text-btn:last-child {
+    font-style: italic;
+}
+
+
+/* image */
+.img-container {
+    padding: 10px 13px;
+    font-weight: 800;
+    border-bottom: 1px solid #8c8c8c;
+}
+
+.img-container .control-input-line {
+    justify-content: center;
+
+}
+
+.img-container .control-input-line button {
+    flex: 0 1 45px;
+    margin: 0 10px;
+    font-size: 10px;
+    line-height: 2.5;
+    font-weight: 700;
+}
+
+#file {
+    opacity: 0;
+}
+
+/* color */
+.color-container {
+    padding: 10px 13px;
+    font-weight: 800;
+}
+
+#color {
+    margin: 0 20px;
+}
+
+/* download */
+.download {
+    text-align: center;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+}
+
+.download button {
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 900;
+}
